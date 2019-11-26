@@ -9,21 +9,21 @@ import io.turntabl.scalagettingstarted.students.TLCStudent
 object MyApp extends App {
 //  print("Hello, World!")
 
-  val TLCStudent1 = new TLCStudent("Chris", "Asare", 2345, "dev", "github.com/chris")
-  val TLCStudent2 = new TLCStudent("Jim", "Rae", 265, "op", "github.com/jim")
-  TLCStudent("Duke","Washington",34728,"UI","github.com/duke")
-  print(TLCStudent1 serviceIsRelated TLCStudent2 )
-
-  print(TLCStudent1.topGrade)
-
-  val m = new TLCManager("Sam")
-  print(m.getWorkLoad)
-  print(m.calculateService)
-
-  print(TLCStudent ("Duke","Washington",34728,"UI","github.com/duke").getWorkLoad)
-
-
-
+//  val TLCStudent1 = new TLCStudent("Chris", "Asare", 2345, "dev", "github.com/chris")
+//  val TLCStudent2 = new TLCStudent("Jim", "Rae", 265, "op", "github.com/jim")
+//  TLCStudent("Duke","Washington",34728,"UI","github.com/duke")
+//  print(TLCStudent1 serviceIsRelated TLCStudent2 )
+//
+//  print(TLCStudent1.topGrade)
+//
+//  val m = new TLCManager("Sam")
+//  print(m.getWorkLoad)
+//  print(m.calculateService)
+//
+//  print(TLCStudent ("Duke","Washington",34728,"UI","github.com/duke").getWorkLoad)
+//
+//
+//
   //Functional Scala
   val func1 = (string: String)=>string.length
 
@@ -52,5 +52,25 @@ object MyApp extends App {
   val output= sub(12,9)
   print(output)
 
+  //Collections
+val tup = ("Chris", "Scala")
+  val (name, favLang) = tup
+  print(name)
+
+  val countries = Map("Ghana"-> "Accra", "US"-> "Washington", "UK"->"London") + ("Togo"-> "Lome", "France"->"Paris", "Mauritius"->"Madagascar")
+  print(countries)
+
+  countries.getOrElse("Norway", "Unknown")
+  print("Norway")
+
+  val friends = Set("Dennis","Bill", "Francis", "Samuel") + ("Samuel")
+ print(friends.count(_=="Samuel"))
+
+  val names = Seq("Dennis","Bill", "Francis", "Samuel")
+//  names.foreach(println)
+
+  names foreach(n=>(if (n.length>6) print (n)))
+
+  print(names count(_.length>6))
 
 }

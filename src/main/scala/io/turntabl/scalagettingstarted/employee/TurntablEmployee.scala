@@ -1,5 +1,8 @@
 package io.turntabl.scalagettingstarted.employee
 
-class TurntablEmployee(name: String) {
-      def getWorkLoad = print(s"WorkLoad: ")
+import java.time.Year
+
+abstract class TurntablEmployee {
+      def getWorkLoad = print("")
+      def calculateService: Int
 }

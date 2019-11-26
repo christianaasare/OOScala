@@ -4,21 +4,24 @@ import java.util.Date
 
 import io.turntabl.scalagettingstarted.manager.TLCManager
 import io.turntabl.scalagettingstarted.students.TLCStudent
-import io.turntabl.scalagettingstarted.functional.Functional
 
 
 object MyApp extends App {
 //  print("Hello, World!")
-//
-//  val TLCStudent1 = new TLCStudent("Chris", "Asare", 2345, "dev", "github.com/chris")
-//  val TLCStudent2 = new TLCStudent("Jim", "Rae", 265, "op", "github.com/jim")
-//  TLCStudent("Duke","Washington",34728,"UI","github.com/duke")
-//  print(TLCStudent1 serviceIsRelated TLCStudent2 )
-//
-//  print(TLCStudent1.topGrade)
 
-//  val m = new TLCManager
-//  print(m.getWorkLoad)
+  val TLCStudent1 = new TLCStudent("Chris", "Asare", 2345, "dev", "github.com/chris")
+  val TLCStudent2 = new TLCStudent("Jim", "Rae", 265, "op", "github.com/jim")
+  TLCStudent("Duke","Washington",34728,"UI","github.com/duke")
+  print(TLCStudent1 serviceIsRelated TLCStudent2 )
+
+  print(TLCStudent1.topGrade)
+
+  val m = new TLCManager("Sam")
+  print(m.getWorkLoad)
+  print(m.calculateService)
+
+  print(TLCStudent ("Duke","Washington",34728,"UI","github.com/duke").getWorkLoad)
+
 
 
   //Functional Scala

@@ -6,13 +6,13 @@ import io.turntabl.scalagettingstarted.employee.TurntablEmployee
 import io.turntabl.scalagettingstarted.grades.Grade
 
 
-class TLCStudent(val firstName: String, val secondName: String, val IDNumber: Integer, val roleDescription: String, val githubURL: String = "github.com/turntabl", yearStarted: Int = 2019) extends TurntablEmployee(name = "Student"){
+class TLCStudent (val firstName: String, val secondName: String, val IDNumber: Integer, val roleDescription: String, val githubURL: String = "github.com/turntabl", yearStarted: Int = 2019)extends TurntablEmployee{
     override def toString = s"FirstName:$firstName SecondName:$secondName ID:$IDNumber Role:$roleDescription Github:$githubURL $yearStarted"
   override def getWorkLoad ={
     super.getWorkLoad;
-    print(s"WorkLoad:Works Super Hard :)")
+    print(s"$firstName:Works Super Hard :)")
   }
-    def calculateService = Year.now().getValue - yearStarted;
+    override def calculateService = Year.now().getValue - yearStarted;
 
     def serviceIsRelated(student:TLCStudent) = yearStarted== yearStarted
 
